@@ -40,7 +40,7 @@ git clone https://github.com/anaswarac-dac/docker_open5gs.git
 cd docker_open5gs
 git checkout ims-sdcore
 cd ims_base
-docker build --no-cache --force-rm -t docker_kamailio .
+sudo docker build --no-cache --force-rm -t docker_kamailio .
 ```
 ### Multihost setup configuration
 
@@ -78,10 +78,10 @@ sudo ufw disable
 sudo sysctl -w net.ipv4.ip_forward=1
 
 # For Kamailio deployment only
-docker compose -f vonr-deploy.yaml build
+sudo docker compose -f vonr-deploy.yaml build
 
 # Kamailio
-docker compose -f vonr-deploy.yaml up
+sudo docker compose -f vonr-deploy.yaml up
 ```
 
 ## Provisioning of SIM information
